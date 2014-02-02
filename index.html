@@ -50,11 +50,11 @@
                     <br>
                     <ul>
                         <li><span style="text-align: center;">Browser Object Model</span>
-                        <li><span style="text-align: center;">Window</span>
-                        <li><span style="text-align: center;">Screen</span>
-                        <li><span style="text-align: center;">Location</span>
-                        <li><span style="text-align: center;">Navigator</span>
-                        <li><span style="text-align: center;">History</span>
+                        <li><span style="text-align: center;">Window Object</span>
+                        <li><span style="text-align: center;">Screen Object</span>
+                        <li><span style="text-align: center;">Location Object</span>
+                        <li><span style="text-align: center;">Navigator Object</span>
+                        <li><span style="text-align: center;">History Object</span>
                     </ul>
                 </section>
 
@@ -102,7 +102,7 @@
                                 <pre><code data-trim>window.alert('test');  ===  alert('test');</code></pre>
                         </ul>
                     </section>
-                    <section>                
+                    <section>
                         <h2>Window Objects</h2>
                         <br>
                         <ul>
@@ -119,7 +119,7 @@
                                 </ul>
                         </ul>
                     </section>
-                    <section>                
+                    <section>
                         <h2><a href="http://www.w3schools.com/jsref/obj_window.asp">Window Object Properties</a></h2>
                         <br>
                         <ul>
@@ -265,72 +265,186 @@ window.print();
                                 <ul><li>Opens a new browser window</li>
                                     <li><button onClick="window_open();">Demo</button></li>
                                     <pre><code data-trim>
-var blogWindow = window.open('http://leechwin.tistory.com/');
+function window_open() {
+    myWindow = window.open("","","width=200,height=100");
+}
                                     </code></pre>
                                </ul>
                             <li><span style="text-align: center;">close()</span>
                                 <ul><li>Closes the current window</li>
                                     <li><button onClick="window_close();">Demo</button></li>
                                     <pre><code data-trim>
-blogWindow.close();
+window.close();
+                                    </code></pre>
+                               </ul>
+                           <li><span style="text-align: center;">focus()</span>
+                                <ul><li>Sets focus to the current window</li>
+                                    <li><button onClick="window_focus();">Demo</button></li>
+                                    <pre><code data-trim>
+window.focus();
+                                    </code></pre>
+                               </ul>
+                           <li><span style="text-align: center;">blur()</span>
+                                <ul><li>Removes focus from the current window</li>
+                                    <li><button onClick="window_blur();">Demo</button></li>
+                                    <pre><code data-trim>
+window.blur();
                                     </code></pre>
                                </ul>
                         </ul>
                     </section>
-
                     <section>
+                        <h2><a href="http://www.w3schools.com/jsref/obj_window.asp">Window Object Methods</a></h2>
+                        <br>
+                        <ul>
+                           <li><span style="text-align: center;">moveBy()</span>
+                                <ul><li>Moves a window relative to its current position</li>
+                                    <li><button onClick="window_moveBy();">Demo</button></li>
+                                    <pre><code data-trim>
+window.moveTo(250,250);
+                                    </code></pre>
+                               </ul>
+                            <li><span style="text-align: center;">moveTo()</span>
+                                <ul><li>Moves a window to the specified position</li>
+                                    <li><button onClick="window_moveTo();">Demo</button></li>
+                                    <pre><code data-trim>
+window.moveTo(0,0);
+                                    </code></pre>
+                               </ul>
+                            <li><span style="text-align: center;">resizeBy()</span>
+                                <ul><li>Resizes the window by the specified pixels</li>
+                                    <li><button onClick="window_resizeBy();">Demo</button></li>
+                                    <pre><code data-trim>
+window.resizeBy(250,250);
+                                    </code></pre>
+                               </ul>
+                            <li><span style="text-align: center;">resizeTo()</span>
+                                <ul><li>Resizes the window to the specified width and height</li>
+                                    <li><button onClick="window_resizeTo();">Demo</button></li>
+                                    <pre><code data-trim>
+window.resizeTo(250,250);
+                                    </code></pre>
+                               </ul>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2><a href="http://www.w3schools.com/jsref/obj_window.asp">Window Object Methods</a></h2>
+                        <br>
+                        <ul>
+                            <li><span style="text-align: center;">scrollBy()</span>
+                                <ul><li>Scrolls the content by the specified number of pixels</li>
+                                    <li><button onClick="window_scrollBy();">Demo</button></li>
+                                    <pre><code data-trim>
+function window_scrollBy() {
+    window.scrollBy(100,0);
+}
+                                    </code></pre>
+                               </ul>
+                            <li><span style="text-align: center;">scrollTo()</span>
+                                <ul><li>Scrolls the content to the specified coordinates</li>
+                                    <li><button onClick="window_scrollTo();">Demo</button></li>
+                                    <pre><code data-trim>
+function window_scrollTo() {
+    window.scrollTo(500,0);
+}
+                                    </code></pre>
+                               </ul>
+                            <li><span style="text-align: center;">scroll()</span>
+                                <ul><li>This method has been replaced by the scrollTo() method.</li>
+                               </ul>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2><a href="http://www.w3schools.com/jsref/obj_window.asp">Window Object Methods</a></h2>
+                        <br>
+                        <ul>
+                            <li><span style="text-align: center;">setTimeout()</span>
+                                <ul><li>Calls a function or evaluates an expression after a specified number of milliseconds</li>
+                                    <li><button onClick="window_setTimeout();">Demo</button></li>
+                                    <pre><code data-trim>
 
-                        focus()
-                        blur()
-                        
-                        moveTo(x,y)
-                        moveBy(dx,dy)
-                        resizeBy()
-                        resizeTo()
-
-                        scroll()    This method has been replaced by the scrollTo() method.
-                        scrollBy()  Scrolls the content by the specified number of pixels
-                        scrollTo()
-
-                        setTimeout(code, delay)
-                        clearTimeout(timeoutId)
-                        setInterval(code, interval)
-                        clearInterval(intervalId
+var timeoutID = null;
+function window_setTimeout() {
+    timeoutID = setTimeout(function() {
+    	var color = myWindow.document.getElementById('box').style.backgroundColor;
+        if ( color === 'red') {
+            myWindow.document.getElementById('box').style.backgroundColor = 'blue';
+        } else {
+            myWindow.document.getElementById('box').style.backgroundColor = 'red';
+        }
+    }, 1000);
+}
+                                    </code></pre>
+                               </ul>
+                            <li><span style="text-align: center;">clearTimeout()</span>
+                                <ul><li>Clears a timer set with setTimeout()</li>
+                                    <li><button onClick="window_clearTimeout();">Demo</button></li>
+                                    <pre><code data-trim>
+function window_clearTimeout() {
+    clearTimeout(timeoutID);
+}
+                                    </code></pre>
+                               </ul>
+                        </ul>
+                    </section>
+					<section>
+                        <h2><a href="http://www.w3schools.com/jsref/obj_window.asp">Window Object Methods</a></h2>
+                        <br>
+                        <ul>
+                            <li><span style="text-align: center;">setInterval()</span>
+                                <ul><li>Calls a function or evaluates an expression at specified intervals (in milliseconds)</li>
+                                    <li><button onClick="window_setInterval();">Demo</button></li>
+                                    <pre><code data-trim>
+var intervalID = null;
+function window_setInterval() {
+    intervalID = setInterval(function() {
+    	var color = myWindow.document.getElementById('box').style.backgroundColor;
+        if ( color === 'red') {
+            myWindow.document.getElementById('box').style.backgroundColor = 'blue';
+        } else {
+            myWindow.document.getElementById('box').style.backgroundColor = 'red';
+        }
+    }, 1000);
+}
+                                    </code></pre>
+                               </ul>
+                            <li><span style="text-align: center;">clearInterval()</span>
+                                <ul><li>Clears a timer set with setInterval()</li>
+                                    <li><button onClick="window_clearInterval();">Demo</button></li>
+                                    <pre><code data-trim>
+function window_clearInterval() {
+    clearInterval(intervalID);
+}
+                                    </code></pre>
+                               </ul>
+                        </ul>
                     </section>
                 </section>
 
-
                 <section>
-                    <h2>Take a Moment</h2>
-                    <p>
-                        Press b or period on your keyboard to enter the 'paused' mode. This mode is helpful when you want to take distracting slides off the screen
-                        during a presentation.
-                    </p>
+                        <h2><a href="http://www.w3schools.com/jsref/obj_screen.asp">Screen Object</a></h2>
+                        <br>
+                        <ul>
+                        	TODODOODODDO
+                            <li><span style="text-align: center;">innerHeight</span>
+                                <ul><li>Returns the inner height of a window's content area</li>
+                                    <li id='window_innerHeight'>This Browser is not supported</li>
+                                </ul>
+                            <li><span style="text-align: center;">innerWidth</span>
+                                <ul><li>Returns the inner width of a window's content area</li>
+                                    <li id='window_innerWidth'>This Browser is not supported</li>
+                                </ul>
+                            <li><span style="text-align: center;">outerHeight</span>
+                                <ul><li>Returns the outer height of a window, including toolbars/scrollbars</li>
+                                    <li id='window_outerHeight'>This Browser is not supported</li>
+                                </ul>
+                            <li><span style="text-align: center;">outerWidth</span>
+                                <ul><li>Returns the outer width of a window, including toolbars/scrollbars</li>
+                                    <li id='window_outerWidth'>This Browser is not supported</li>
+                                </ul>
+                        </ul>
                 </section>
-
-
-
-
-                <section>
-                    <h2>Pretty Code</h2>
-                    <pre><code data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
-}
-                    </code></pre>
-                    <p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-                </section>
+ 
 
 
 
@@ -586,13 +700,146 @@ Reveal.addEventListener( 'customevent', function() {
                 alert(res);
             }
 
-            var blogWindow;
+            var myWindow = null;
+            function isWindowEnable() {
+                if ( myWindow == null || myWindow.closed == true ) {
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+
             function window_open() {
-                blogWindow = window.open('http://leechwin.tistory.com/');
+                if ( !isWindowEnable() ) {
+                    myWindow = window.open("","","width=200,height=100");
+                }
             }
             function window_close() {
-                blogWindow.close();
-            }            
+                if ( isWindowEnable()  ) {
+                    myWindow.close();
+                    myWindow = null;
+                }
+            }
+            function window_focus() {
+                if ( isWindowEnable() ) {
+                    myWindow.focus();
+                }
+            }
+            function window_blur() {
+                if ( isWindowEnable() ) {
+                    myWindow.blur();
+                }
+            }
+
+            function window_moveBy() {
+                if ( !isWindowEnable() ) {
+                    myWindow = window.open("","","width=200,height=100");
+                }
+                if ( isWindowEnable() ) {
+                    myWindow.moveBy(250,250);
+                    myWindow.focus();
+                }
+            }
+            function window_moveTo() {
+                if ( !isWindowEnable() ) {
+                    myWindow = window.open("","","width=200,height=100");
+                }
+                if ( isWindowEnable() ) {
+                    myWindow.moveTo(0,0);
+                    myWindow.focus();
+                }
+            }
+            function window_resizeBy() {
+                if ( !isWindowEnable() ) {
+                    myWindow = window.open("","","width=200,height=100");
+                }
+                if ( isWindowEnable() ) {
+                    myWindow.resizeBy(250,250);
+                    myWindow.focus();
+                }
+            }
+            function window_resizeTo() {
+                if ( !isWindowEnable() ) {
+                    myWindow = window.open("","","width=200,height=100");
+                }
+                if ( isWindowEnable() ) {
+                    myWindow.resizeTo(250,250);
+                    myWindow.focus();
+                }
+            }
+
+            function window_scrollBy() {
+                if ( !isWindowEnable() ) {
+                    myWindow = window.open("","","width=400,height=300");
+                    myWindow.document.write("<p>Click the button to scroll the document window by 100px horizontally.</p><br><br><div style='border:1px solid black;background-color:lightblue;height:75px;width:5000px;'></div>");
+                } else {
+                	myWindow.scrollBy(500,0);
+                }
+            }
+            function window_scrollTo() {
+                if ( isWindowEnable() ) {
+                    myWindow = window.open("","","width=400,height=300");
+                    myWindow.document.write("<p>Click the button to scroll the document window by 100px horizontally.</p><br><br><div style='border:1px solid black;background-color:lightblue;height:75px;width:5000px;'></div>");
+                } else {
+                	myWindow.scrollTo(500,0);
+                }
+            }
+
+            var timeoutID = null;
+            function window_setTimeout() {
+                if ( !isWindowEnable() ) {
+                    myWindow = window.open("","","width=400,height=300");
+                    myWindow.document.write("<div id='box' style='border:1px solid black;background-color:red;height:75px;width:75px;'></div>");
+                }
+                timeoutID = setTimeout(function() {
+                	var color = myWindow.document.getElementById('box').style.backgroundColor;
+                    if ( color == 'red') {
+                        myWindow.document.getElementById('box').style.backgroundColor = 'blue';
+                    } else {
+                        myWindow.document.getElementById('box').style.backgroundColor = 'red';
+                    }
+                }, 2000);
+
+            }
+            function window_clearTimeout() {
+                clearTimeout(timeoutID);
+
+            }
+
+            var intervalID= null;
+            function window_setInterval() {
+            	if ( isWindowEnable() ) {
+            		clearInterval(intervalID);
+            		myWindow.close();
+            		myWindow = null;
+            	}
+                if ( !isWindowEnable() ) {
+                    myWindow = window.open("","","width=400,height=300");
+                    myWindow.document.write("<div id='box' style='border:1px solid black;background-color:red;height:75px;width:75px;'></div>");
+                }
+                intervalID = setInterval(function() {
+                	var color = myWindow.document.getElementById('box').style.backgroundColor;
+                    if ( color == 'red') {
+                        myWindow.document.getElementById('box').style.backgroundColor = 'blue';
+                    } else {
+                        myWindow.document.getElementById('box').style.backgroundColor = 'red';
+                    }
+                }, 1000);
+
+            }
+            function window_clearInterval() {
+                clearInterval(intervalID);
+
+            }
+
+            // function get_random_color() {
+            //     var letters = '0123456789ABCDEF'.split('');
+            //     var color = '#';
+            //     for (var i = 0; i < 6; i++ ) {
+            //         color += letters[Math.round(Math.random() * 15)];
+            //     }
+            //     return color;
+            // }
         </script>
     </body>
 </html>
