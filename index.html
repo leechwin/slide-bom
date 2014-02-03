@@ -39,7 +39,7 @@
                     <h2>Browser Object Model(BOM)</h2>
                     <br>
                     <div>
-                        <a href="">leechwin1@gmail.com</a>
+                        <a href="mailto:leechwin1@gmail.com">leechwin1@gmail.com</a>
                     </div>
                     <br>
                     <div>2014. 2</div>
@@ -63,10 +63,10 @@
                         <h2>Browser Object Model</h2>
                         <br>
                         <ul>
-                            <li><span style="text-align: center;">Web Browser 를 구성하는 객체들의 집합</span>
-                            <li><span style="text-align: center;">Browser Vender 별 구현이 다를 수 있음</span>
-                            <li><span style="text-align: center;">BOM 은 표준이 아니지만 대부분 Netscape 3 를 표준으로 많이 따르고 있음</span>
-                            <li><span style="text-align: center;">BOM 의 Javascript Interface 를 통해 Browser Control 이 가능</span>
+                            <li><span style="text-align: center;">Set of browser objects</span>
+                            <li><span style="text-align: center;">There is no public standard, but all major browsers support it</span>
+                            <li><span style="text-align: center;">Netscape3 most standard</span>
+                            <li><span style="text-align: center;">Browser controls through the  BOM interface</span>
                         </ul>
                     </section>
                     <section>
@@ -95,10 +95,9 @@
                         <h2>Window Object</h2>
                         <br>
                         <ul>
-                            <li><span style="text-align: center;">Web Browser 최상의 객체 (Browser Root)</span>
-                            <li><span style="text-align: center;">Browser 별로 하나만 존재 (Global object)</span>
-                                <ul><li>Browser 내에 Tab 이 여러 개여도 window 객체는 하나</li></ul>
-                            <li><span style="text-align: center;">전역객체이기 때문에 window 를 명시하지 않아도 됨</span>
+                            <li><span style="text-align: center;">Root object of Web Browser</span>
+                            <li><span style="text-align: center;">The window object represents an open window in a browser</span>
+                            <li><span style="text-align: center;">Global object</span>
                                 <pre><code data-trim>window.alert('test');  ===  alert('test');</code></pre>
                         </ul>
                     </section>
@@ -335,18 +334,14 @@ window.resizeTo(250,250);
                                 <ul><li>Scrolls the content by the specified number of pixels</li>
                                     <li><button onClick="window_scrollBy();">Demo</button></li>
                                     <pre><code data-trim>
-function window_scrollBy() {
-    window.scrollBy(100,0);
-}
+window.scrollBy(100,0);
                                     </code></pre>
                                </ul>
                             <li><span style="text-align: center;">scrollTo()</span>
                                 <ul><li>Scrolls the content to the specified coordinates</li>
                                     <li><button onClick="window_scrollTo();">Demo</button></li>
                                     <pre><code data-trim>
-function window_scrollTo() {
-    window.scrollTo(500,0);
-}
+window.scrollTo(500,0);
                                     </code></pre>
                                </ul>
                             <li><span style="text-align: center;">scroll()</span>
@@ -363,26 +358,14 @@ function window_scrollTo() {
                                     <li><button onClick="window_setTimeout();">Demo</button></li>
                                     <pre><code data-trim>
 
-var timeoutID = null;
-function window_setTimeout() {
-    timeoutID = setTimeout(function() {
-    	var color = myWindow.document.getElementById('box').style.backgroundColor;
-        if ( color === 'red') {
-            myWindow.document.getElementById('box').style.backgroundColor = 'blue';
-        } else {
-            myWindow.document.getElementById('box').style.backgroundColor = 'red';
-        }
-    }, 1000);
-}
+var timeoutID = setTimeout( function() { 'logic' }, 1000 );
                                     </code></pre>
                                </ul>
                             <li><span style="text-align: center;">clearTimeout()</span>
                                 <ul><li>Clears a timer set with setTimeout()</li>
                                     <li><button onClick="window_clearTimeout();">Demo</button></li>
                                     <pre><code data-trim>
-function window_clearTimeout() {
-    clearTimeout(timeoutID);
-}
+clearTimeout(timeoutID);
                                     </code></pre>
                                </ul>
                         </ul>
@@ -395,26 +378,14 @@ function window_clearTimeout() {
                                 <ul><li>Calls a function or evaluates an expression at specified intervals (in milliseconds)</li>
                                     <li><button onClick="window_setInterval();">Demo</button></li>
                                     <pre><code data-trim>
-var intervalID = null;
-function window_setInterval() {
-    intervalID = setInterval(function() {
-    	var color = myWindow.document.getElementById('box').style.backgroundColor;
-        if ( color === 'red') {
-            myWindow.document.getElementById('box').style.backgroundColor = 'blue';
-        } else {
-            myWindow.document.getElementById('box').style.backgroundColor = 'red';
-        }
-    }, 1000);
-}
+var intervalID = setInterval( function() { 'logic' }, 1000 );
                                     </code></pre>
                                </ul>
                             <li><span style="text-align: center;">clearInterval()</span>
                                 <ul><li>Clears a timer set with setInterval()</li>
                                     <li><button onClick="window_clearInterval();">Demo</button></li>
                                     <pre><code data-trim>
-function window_clearInterval() {
-    clearInterval(intervalID);
-}
+clearInterval(intervalID);
                                     </code></pre>
                                </ul>
                         </ul>
@@ -422,221 +393,264 @@ function window_clearInterval() {
                 </section>
 
                 <section>
+                    <section>
                         <h2><a href="http://www.w3schools.com/jsref/obj_screen.asp">Screen Object</a></h2>
                         <br>
                         <ul>
-                        	TODODOODODDO
-                            <li><span style="text-align: center;">innerHeight</span>
-                                <ul><li>Returns the inner height of a window's content area</li>
-                                    <li id='window_innerHeight'>This Browser is not supported</li>
+                            <li><span style="text-align: center;">The screen object contains information about the visitor's screen</span>
+                            <pre><code data-trim>window.screen === screen</code></pre>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2><a href="http://www.w3schools.com/jsref/obj_screen.asp">Screen Object Properties</a></h2>
+                        <br>
+                        <ul>
+                            <li><span style="text-align: center;">availHeight</span>
+                                <ul><li>Returns the height of the screen (excluding the Windows Taskbar)</li>
+                                    <li id='screen_availHeight'>This Browser is not supported</li>
                                 </ul>
-                            <li><span style="text-align: center;">innerWidth</span>
-                                <ul><li>Returns the inner width of a window's content area</li>
-                                    <li id='window_innerWidth'>This Browser is not supported</li>
+                            <li><span style="text-align: center;">availWidth</span>
+                                <ul><li>Returns the width of the screen (excluding the Windows Taskbar)</li>
+                                    <li id='screen_availWidth'>This Browser is not supported</li>
                                 </ul>
-                            <li><span style="text-align: center;">outerHeight</span>
-                                <ul><li>Returns the outer height of a window, including toolbars/scrollbars</li>
-                                    <li id='window_outerHeight'>This Browser is not supported</li>
+                            <li><span style="text-align: center;">height</span>
+                                <ul><li>Returns the total height of the screen</li>
+                                    <li id='screen_height'>This Browser is not supported</li>
                                 </ul>
-                            <li><span style="text-align: center;">outerWidth</span>
-                                <ul><li>Returns the outer width of a window, including toolbars/scrollbars</li>
-                                    <li id='window_outerWidth'>This Browser is not supported</li>
+                            <li><span style="text-align: center;">width</span>
+                                <ul><li>Returns the total width of the screen</li>
+                                    <li id='screen_width'>This Browser is not supported</li>
+                                </ul>
+                            <li><span style="text-align: center;">colorDepth</span>
+                                <ul><li>Returns the bit depth of the color palette for displaying images</li>
+                                    <li id='screen_colorDepth'>This Browser is not supported</li>
+                                </ul>
+                            <li><span style="text-align: center;">pixelDepth</span>
+                                <ul><li>Returns the color resolution (in bits per pixel) of the screen</li>
+                                    <li id='screen_pixelDepth'>This Browser is not supported</li>
+                                </ul>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2><a href="http://www.w3schools.com/jsref/obj_location.asp">Location Object</a></h2>
+                        <br>
+                        <ul>
+                            <li><span style="text-align: center;">The location object contains information about the current URL</span>
+                            <pre><code data-trim>window.location === screen</code></pre>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2><a href="http://www.w3schools.com/jsref/obj_location.asp">Location Object Properties</a></h2>
+                        <br>
+                        <ul>
+                            <li><span style="text-align: center;">hash</span>
+                                <ul><li>Sets or returns the anchor portion of a URL</li>
+                                    <li id='location_hash'>This Browser is not supported</li>
+                                </ul>
+                            <li><span style="text-align: center;">host</span>
+                                <ul><li>Sets or returns the hostname and port of a URL</li>
+                                    <li id='location_host'>This Browser is not supported</li>
+                                </ul>
+                            <li><span style="text-align: center;">hostname</span>
+                                <ul><li>Sets or returns the hostname of a URL</li>
+                                    <li id='location_hostname'>This Browser is not supported</li>
+                                </ul>
+                            <li><span style="text-align: center;">href</span>
+                                <ul><li>Sets or returns the entire URL</li>
+                                    <li id='location_href'>This Browser is not supported</li>
                                 </ul>
                         </ul>
-                </section>
- 
-
-
-
-
-
-                <section>
-                    <h2>Intergalactic Interconnections</h2>
-                    <p>
-                        You can link between slides internally,
-                        <a href="#/2/3">like this</a>.
-                    </p>
-                </section>
-
-                <section>
-                    <section id="fragments">
-                        <h2>Fragmented Views</h2>
-                        <p>Hit the next arrow...</p>
-                        <p class="fragment">... to step through ...</p>
-                        <ol>
-                            <li class="fragment"><code>any type</code></li>
-                            <li class="fragment"><em>of view</em></li>
-                            <li class="fragment"><strong>fragments</strong></li>
-                        </ol>
-
-                        <aside class="notes">
-                            This slide has fragments which are also stepped through in the notes window.
-                        </aside>
                     </section>
                     <section>
-                        <h2>Fragment Styles</h2>
-                        <p>There's a few styles of fragments, like:</p>
-                        <p class="fragment grow">grow</p>
-                        <p class="fragment shrink">shrink</p>
-                        <p class="fragment roll-in">roll-in</p>
-                        <p class="fragment fade-out">fade-out</p>
-                        <p class="fragment highlight-red">highlight-red</p>
-                        <p class="fragment highlight-green">highlight-green</p>
-                        <p class="fragment highlight-blue">highlight-blue</p>
-                        <p class="fragment current-visible">current-visible</p>
-                        <p class="fragment highlight-current-blue">highlight-current-blue</p>
-                    </section>
-                </section>
-
-                <section>
-                    <h2>Spectacular image!</h2>
-                    <a class="image" href="http://lab.hakim.se/meny/" target="_blank">
-                        <img width="320" height="299" src="http://s3.amazonaws.com/hakim-static/portfolio/images/meny.png" alt="Meny">
-                    </a>
-                </section>
-
-                <section>
-                    <h2>Export to PDF</h2>
-                    <p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, below is an example that's been uploaded to SlideShare.</p>
-                    <iframe id="slideshare" src="http://www.slideshare.net/slideshow/embed_code/13872948" width="455" height="356" style="margin:0;overflow:hidden;border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe>
-                    <script>
-                        document.getElementById('slideshare').attributeName = 'allowfullscreen';
-                    </script>
-                </section>
-
-
-
-
-
-
-
-
-                <!-- Example of nested vertical slides -->
-                <section>
-                    <section>
-                        <h2>Vertical Slides</h2>
-                        <p>
-                            Slides can be nested inside of other slides,
-                            try pressing <a href="#" class="navigate-down">down</a>.
-                        </p>
-                        <a href="#" class="image navigate-down">
-                            <img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-                        </a>
+                        <h2><a href="http://www.w3schools.com/jsref/obj_location.asp">Location Object Properties</a></h2>
+                        <br>
+                        <ul>
+                            <li><span style="text-align: center;">pathname</span>
+                                <ul><li>Sets or returns the path name of a URL</li>
+                                    <li id='locationpathname'>This Browser is not supported</li>
+                                </ul>
+                            <li><span style="text-align: center;">port</span>
+                                <ul><li>Sets or returns the port number the server uses for a URL</li>
+                                    <li id='location_port'>This Browser is not supported</li>
+                                </ul>
+                            <li><span style="text-align: center;">protocol</span>
+                                <ul><li>Sets or returns the protocol of a URL</li>
+                                    <li id='location_protocol'>This Browser is not supported</li>
+                                </ul>
+                            <li><span style="text-align: center;">search</span>
+                                <ul><li>Sets or returns the query portion of a URL</li>
+                                    <li id='location_search'>This Browser is not supported</li>
+                                </ul>
+                        </ul>
                     </section>
                     <section>
-                        <h2>Basement Level 1</h2>
-                        <p>Press down or up to navigate.</p>
+                        <h2><a href="http://www.w3schools.com/jsref/obj_location.asp">Location Object Methods</a></h2>
+                        <br>
+                        <ul>
+                            <li><span style="text-align: center;">assign()</span>
+                                <ul><li>Loads a new document</li>
+                                    <li><button onClick="location_assign();">Demo</button></li>
+                                    <pre><code data-trim>
+location.assign("http://leechwin.tistory.com");
+                                    </code></pre>
+                               </ul>
+                            <li><span style="text-align: center;">reload()</span>
+                                <ul><li>Reloads the current document</li>
+                                    <li><button onClick="location_reload();">Demo</button></li>
+                                    <pre><code data-trim>
+location.reload();
+                                    </code></pre>
+                               </ul>
+                            <li><span style="text-align: center;">replace()</span>
+                                <ul><li>Replaces the current document with a new one</li>
+                                    <li><button onClick="location_replace();">Demo</button></li>
+                                    <pre><code data-trim>
+location.replace("http://www.tizenschools.com");
+                                    </code></pre>
+                               </ul>
+                        </ul>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2><a href="http://www.w3schools.com/jsref/obj_navigator.asp">Navigator Object</a></h2>
+                        <br>
+                        <ul>
+                            <li><span style="text-align: center;">The navigator object contains information about the browser</span>
+                            <pre><code data-trim>window.navigator === navigator</code></pre>
+                        </ul>
                     </section>
                     <section>
-                        <h2>Basement Level 2</h2>
-                        <p>Cornify</p>
-                        <a class="test" href="http://cornify.com">
-                            <img width="280" height="326" src="https://s3.amazonaws.com/hakim-static/reveal-js/cornify.gif" alt="Unicorn">
-                        </a>
+                        <h2><a href="http://www.w3schools.com/jsref/obj_navigator.asp">Navigator Object Properties</a></h2>
+                        <br>
+                        <ul>
+                            <li><span style="text-align: center;">appCodeName</span>
+                                <ul><li>Returns the code name of the browser</li>
+                                    <li id='navigator_appCodeName'>This Browser is not supported</li>
+                                </ul>
+                            <li><span style="text-align: center;">appName</span>
+                                <ul><li>Returns the name of the browser</li>
+                                    <li id='navigator_appName'>This Browser is not supported</li>
+                                </ul>
+                            <li><span style="text-align: center;">appVersion</span>
+                                <ul><li>Returns the version information of the browser</li>
+                                    <li id='navigator_appVersion'>This Browser is not supported</li>
+                                </ul>
+                            <li><span style="text-align: center;">cookieEnabled</span>
+                                <ul><li>Determines whether cookies are enabled in the browser</li>
+                                    <li id='navigator_cookieEnabled'>This Browser is not supported</li>
+                                </ul>
+                            <li><span style="text-align: center;">language</span>
+                                <ul><li>Returns the language of the browser</li>
+                                    <li id='navigator_language'>This Browser is not supported</li>
+                                </ul>
+                        </ul>
                     </section>
                     <section>
-                        <h2>Basement Level 3</h2>
-                        <p>That's it, time to go back up.</p>
-                        <a href="#/2" class="image">
-                            <img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
-                        </a>
+                        <h2><a href="http://www.w3schools.com/jsref/obj_navigator.asp">Navigator Object Properties</a></h2>
+                        <br>
+                        <ul>
+                            <li><span style="text-align: center;">onLine</span>
+                                <ul><li>Determines whether the browser is online</li>
+                                    <li id='navigator_onLine'>This Browser is not supported</li>
+                                </ul>
+                            <li><span style="text-align: center;">platform</span>
+                                <ul><li>Returns for which platform the browser is compiled</li>
+                                    <li id='navigator_platform'>This Browser is not supported</li>
+                                </ul>
+                            <li><span style="text-align: center;">product</span>
+                                <ul><li>Returns the engine name of the browser</li>
+                                    <li id='navigator_product'>This Browser is not supported</li>
+                                </ul>
+                            <li><span style="text-align: center;">userAgent</span>
+                                <ul><li>Returns the user-agent header sent by the browser to the server</li>
+                                    <li id='navigator_userAgent'>This Browser is not supported</li>
+                                </ul>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2><a href="http://www.w3schools.com/jsref/obj_navigator.asp">Navigator Object Methods</a></h2>
+                        <br>
+                        <ul>
+                            <li><span style="text-align: center;">javaEnabled()</span>
+                                <ul><li>Specifies whether or not the browser has Java enabled</li>
+                                    <li id='navigator_javaEnabled'>This Browser is not supported</li>
+                                    <pre><code data-trim>
+navigator.javaEnabled();
+                                    </code></pre>
+                                </ul>
+                        </ul>
                     </section>
                 </section>
 
                 <section>
-                    <h2>Marvelous Unordered List</h2>
-                    <ul>
-                        <li>No order here</li>
-                        <li>Or here</li>
-                        <li>Or here</li>
-                        <li>Or here</li>
-                    </ul>
+                    <section>
+                        <h2><a href="http://www.w3schools.com/jsref/obj_history.asp">History Object</a></h2>
+                        <br>
+                        <ul>
+                            <li><span style="text-align: center;">The history object contains the URLs visited by the user (within a browser window)</span>
+                            <pre><code data-trim>window.history === history</code></pre>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2><a href="http://www.w3schools.com/jsref/obj_history.asp">History Object Properties</a></h2>
+                        <br>
+                        <ul>
+                            <li><span style="text-align: center;">length</span>
+                                <ul><li>Returns the number of URLs in the history list</li>
+                                    <li id='history_length'>This Browser is not supported</li>
+                                </ul>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2><a href="http://www.w3schools.com/jsref/obj_history.asp">History Object Methods</a></h2>
+                        <br>
+                        <ul>
+                            <li><span style="text-align: center;">go()</span>
+                                <ul><li>Loads a specific URL from the history list</li>
+                                    <li><button onClick="history_go();">Demo</button></li>
+                                    <pre><code data-trim>
+history.go(-1);
+                                    </code></pre>
+                               </ul>
+                            <li><span style="text-align: center;">back()</span>
+                                <ul><li>Loads the previous URL in the history list</li>
+                                    <li><button onClick="history_back();">Demo</button></li>
+                                    <pre><code data-trim>
+history.back();
+                                    </code></pre>
+                               </ul>
+                            <li><span style="text-align: center;">forward()</span>
+                                <ul><li>Loads the next URL in the history list</li>
+                                    <li><button onClick="history_forward();">Demo</button></li>
+                                    <pre><code data-trim>
+history.forward();
+                                    </code></pre>
+                               </ul>
+                        </ul>
+                    </section>
                 </section>
 
                 <section>
-                    <h2>Fantastic Ordered List</h2>
-                    <ol>
-                        <li>One is smaller than...</li>
-                        <li>Two is smaller than...</li>
-                        <li>Three!</li>
-                    </ol>
+                    <h2>References</h2>
+                        <br>
+                        <ul>
+                            <li><span style="text-align: center;">JavaScript: The Definitive Guide 5/E</span>
+                            <li><span style="text-align: center;"><a href="http://www.w3schools.com/jsref/">w3schools.com</a></span>
                 </section>
-
-                <section data-markdown>
-                    <script type="text/template">
-                        ## Markdown support
-
-                        For those of you who like that sort of thing. Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-
-                        ```
-                        <section data-markdown>
-                          ## Markdown support
-
-                          For those of you who like that sort of thing.
-                          Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-                        </section>
-                        ```
-                    </script>
-                </section>
-
-                <section id="transitions">
-                    <h2>Transition Styles</h2>
-                    <p>
-                        You can select from different transitions, like: <br>
-                        <a href="?transition=cube#/transitions">Cube</a> -
-                        <a href="?transition=page#/transitions">Page</a> -
-                        <a href="?transition=concave#/transitions">Concave</a> -
-                        <a href="?transition=zoom#/transitions">Zoom</a> -
-                        <a href="?transition=linear#/transitions">Linear</a> -
-                        <a href="?transition=fade#/transitions">Fade</a> -
-                        <a href="?transition=none#/transitions">None</a> -
-                        <a href="?#/transitions">Default</a>
-                    </p>
-                </section>
-
-                <section data-state="customevent">
-                    <h2>Custom Events</h2>
-                    <p>
-                        Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-                    </p>
-                    <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
-Reveal.addEventListener( 'customevent', function() {
-    console.log( '"customevent" has fired' );
-} );
-                    </code></pre>
-                </section>
-
-                <section>
-                    <section data-background="#007777">
-                        <h2>Slide Backgrounds</h2>
-                        <p>
-                            Set <code>data-background="#007777"</code> on a slide to change the full page background to the given color. All CSS color formats are supported.
-                        </p>
-                        <a href="#" class="image navigate-down">
-                            <img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-                        </a>
-                    </section>
-                    <section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
-                        <h2>Image Backgrounds</h2>
-                        <pre><code>&lt;section data-background="image.png"&gt;</code></pre>
-                    </section>
-                    <section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" data-background-repeat="repeat" data-background-size="100px">
-                        <h2>Repeated Image Backgrounds</h2>
-                        <pre><code style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-                    </section>
-                </section>
-
-
-
-
-
 
                 <section>
                     <h1>Thank you!</h1>
+                    <br>
+                        <span style="text-align: center;"><a href="mailto:leechwin1@gmail.com">leechwin1@gmail.com</a></span>
                 </section>
             </div>
 
         </div>
+
 
         <script src="lib/js/head.min.js"></script>
         <script src="js/reveal.min.js"></script>
@@ -777,7 +791,7 @@ Reveal.addEventListener( 'customevent', function() {
                 }
             }
             function window_scrollTo() {
-                if ( isWindowEnable() ) {
+                if ( !isWindowEnable() ) {
                     myWindow = window.open("","","width=400,height=300");
                     myWindow.document.write("<p>Click the button to scroll the document window by 100px horizontally.</p><br><br><div style='border:1px solid black;background-color:lightblue;height:75px;width:5000px;'></div>");
                 } else {
@@ -832,14 +846,81 @@ Reveal.addEventListener( 'customevent', function() {
 
             }
 
-            // function get_random_color() {
-            //     var letters = '0123456789ABCDEF'.split('');
-            //     var color = '#';
-            //     for (var i = 0; i < 6; i++ ) {
-            //         color += letters[Math.round(Math.random() * 15)];
-            //     }
-            //     return color;
-            // }
+
+            $('#screen_availHeight').html('State: ' + screen.availHeight);
+            $('#screen_availWidth').html('State: ' + screen.availWidth);
+            $('#screen_height').html('State: ' + screen.height);
+            $('#screen_width').html('State: ' + screen.width);
+            $('#screen_colorDepth').html('State: ' + screen.colorDepth);
+            $('#screen_pixelDepth').html('State: ' + screen.pixelDepth);
+
+
+            $('#location_hash').html('State: ' + location.hash);
+            $('#location_host').html('State: ' + location.host);
+            $('#location_hostname').html('State: ' + location.hostname);
+            $('#location_href').html('State: ' + location.href);
+            $('#location_pathname').html('State: ' + location.pathname);
+            $('#location_port').html('State: ' + location.port);
+            $('#location_protocol').html('State: ' + location.protocol);
+            $('#location_search').html('State: ' + location.search);
+            function location_assign() {
+                if ( !isWindowEnable() ) {
+                    myWindow = window.open("","","width=400,height=300");
+                    myWindow.location.assign("http://leechwin.github.io");
+                } else {
+                    myWindow.location.assign("http://leechwin.tistory.com");
+                }
+            }
+            function location_reload() {
+                if ( !isWindowEnable() ) {
+                    myWindow = window.open("","","width=400,height=300");
+                    myWindow.location.assign("http://leechwin.github.io");
+                } else {
+                    myWindow.location.reload();
+                }
+            }
+            function location_replace() {
+                if ( !isWindowEnable() ) {
+                    myWindow = window.open("","","width=400,height=300");
+                    myWindow.location.assign("http://leechwin.github.io");
+                } else {
+                    myWindow.location.replace("http://www.tizenschools.com");
+                }
+            }
+
+
+            $('#navigator_appCodeName').html('State: ' + navigator.appCodeName);
+            $('#navigator_appName').html('State: ' + navigator.appName);
+            $('#navigator_appVersion').html('State: ' + navigator.appVersion);
+            $('#navigator_cookieEnabled').html('State: ' + navigator.cookieEnabled);
+            $('#navigator_language').html('State: ' + navigator.language);
+            $('#navigator_onLine').html('State: ' + navigator.onLine);
+            $('#navigator_platform').html('State: ' + navigator.platform);
+            $('#navigator_product').html('State: ' + navigator.product);
+            $('#navigator_userAgent').html('State: ' + navigator.userAgent);
+            $('#navigator_javaEnabled').html('State: ' + navigator.javaEnabled());
+
+
+            $('#history_length').html('State: ' + history.length);
+            function history_go() {
+                if ( !isWindowEnable() ) {
+                    myWindow = window.open("","","width=400,height=300");
+                    myWindow.location.assign("http://leechwin.tistory.com");
+                } else {
+                    myWindow.history.go(-1);
+                }
+            }
+            function history_back() {
+                if ( isWindowEnable() ) {
+                    myWindow.history.back();
+                }
+            }
+            function history_forward() {
+                if ( isWindowEnable() ) {
+                    myWindow.history.forward();
+                }
+            }
+
         </script>
     </body>
 </html>
