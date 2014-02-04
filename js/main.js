@@ -216,17 +216,11 @@ $('#navigator_javaEnabled').html('State: ' + navigator.javaEnabled());
 var flag = false;
 $('#history_length').html('State: ' + history.length);
 function history_go() {
-    if ( flag == false ) {
-        window.parent.historyFrame.location.href = "http://leechwin.github.io/webslidecontrol/";
-        flag = true;
-    }
-    window.parent.historyFrame.history.go(-1);
+    history.go(-1);
 }
 function history_back() {
-    window.parent.historyFrame.history.back();
+    history.back();
 }
 function history_forward() {
-    if ( isWindowEnable() ) {
-        window.parent.historyFrame.history.forward();
-    }
+    history.forward();
 }
