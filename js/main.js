@@ -213,22 +213,20 @@ $('#navigator_userAgent').html('State: ' + navigator.userAgent);
 $('#navigator_javaEnabled').html('State: ' + navigator.javaEnabled());
 
 
+var flag = false;
 $('#history_length').html('State: ' + history.length);
 function history_go() {
-    if ( !isWindowEnable() ) {
-        myWindow = window.open("","","width=400,height=300");
-        myWindow.location.assign("http://leechwin.tistory.com");
-    } else {
-        myWindow.history.go(-1);
+    if ( flag == false ) {
+        window.parent.myFrame.location.assign("http://leechwin.github.io");
+        flag = true;
     }
+    window.parent.myFrame.window.history.go(-1);
 }
 function history_back() {
-    if ( isWindowEnable() ) {
-        myWindow.history.back();
-    }
+    window.parent.myFrame.window.history.back();
 }
 function history_forward() {
     if ( isWindowEnable() ) {
-        myWindow.history.forward();
+        window.parent.myFrame.window.history.forward();
     }
 }
