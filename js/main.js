@@ -217,9 +217,7 @@ var flag = false;
 $('#history_length').html('State: ' + history.length);
 function history_go() {
     if ( flag == false ) {
-        window.parent.historyFrame.location.href = "http://leechwin.tistory.com/entry/Browser-Object-Model";
-        window.parent.historyFrame.location.href = "http://leechwin.tistory.com/entry/Browserling-Cross-Browser-Testing-Service";
-        window.parent.historyFrame.location.href = "http://leechwin.tistory.com/entry/Brackets-Open-source-code-editor-for-the-web";
+        window.parent.historyFrame.location.href = "http://leechwin.github.io/webslidecontrol/";
         flag = true;
     }
     window.parent.historyFrame.history.go(-1);
