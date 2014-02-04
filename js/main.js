@@ -217,18 +217,18 @@ var flag = false;
 $('#history_length').html('State: ' + history.length);
 function history_go() {
     if ( flag == false ) {
-        window.parent.myFrame.location.assign("http://leechwin.tistory.com/entry/Browser-Object-Model");
-        window.parent.myFrame.location.assign("http://leechwin.tistory.com/entry/Browserling-Cross-Browser-Testing-Service");
-        window.parent.myFrame.location.assign("http://leechwin.tistory.com/entry/Brackets-Open-source-code-editor-for-the-web");
+        window.parent.historyFrame.location.href = "http://leechwin.tistory.com/entry/Browser-Object-Model";
+        window.parent.historyFrame.location.href = "http://leechwin.tistory.com/entry/Browserling-Cross-Browser-Testing-Service";
+        window.parent.historyFrame.location.href = "http://leechwin.tistory.com/entry/Brackets-Open-source-code-editor-for-the-web";
         flag = true;
     }
-    window.parent.myFrame.window.history.go(-1);
+    window.parent.historyFrame.history.go(-1);
 }
 function history_back() {
-    window.parent.myFrame.window.history.back();
+    window.parent.historyFrame.history.back();
 }
 function history_forward() {
     if ( isWindowEnable() ) {
-        window.parent.myFrame.window.history.forward();
+        window.parent.historyFrame.history.forward();
     }
 }
