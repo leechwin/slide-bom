@@ -178,7 +178,7 @@ $('#location_search').html('State: ' + location.search);
 function location_assign() {
     if ( !isWindowEnable() ) {
         myWindow = window.open("","","width=400,height=300");
-        myWindow.location.assign("http://leechwin.github.io");
+        myWindow.location.assign("www.daum.net");
     } else {
         myWindow.location.assign("http://leechwin.tistory.com");
     }
@@ -217,7 +217,7 @@ var flag = false;
 $('#history_length').html('State: ' + history.length);
 function history_go() {
     if ( flag == false ) {
-        window.parent.myFrame.location.assign("http://leechwin.github.io");
+        window.parent.myFrame.location.assign("http://www.daum.net");
         flag = true;
     }
     window.parent.myFrame.window.history.go(-1);
